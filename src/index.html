@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    We are using node <script>document.write(process.versions.node)</script>,
+    Chrome <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.
+    <input type="button" id="onBtn" value="1">
+    <input type="button" id="offBtn" value="0">
+  </body>
+
+  <script>
+    const ipc = require('electron').ipcRenderer;
+
+    const onBtn  = document.querySelector('#onBtn');
+    const offBtn = document.querySelector('#offBtn');
+
+    onBtn.addEventListener('click', () => {
+      ipc.send('control','1');
+    });
+
+    offBtn.addEventListener('click', () => {
+      ipc.send('control','0');
+    });
+
+
+  </script>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "dcomm",
+  "version": "1.0.0",
+  "description": "A GUI interface for the D-Com",
+  "main": "index.js",
+  "scripts": {
+    "install": "electron-rebuild",
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Digimon",
+    "Arduino",
+    "DComm"
+  ],
+  "author": "Aviv Beeri",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^6.0.2",
+    "electron-rebuild": "^1.8.5",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "core-js": "^3.2.1",
+    "serialport": "^7.1.5"
+  }
+}
